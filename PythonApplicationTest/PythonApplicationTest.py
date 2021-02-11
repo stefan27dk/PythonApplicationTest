@@ -1067,10 +1067,10 @@
 
 
 #3 - *2 multiply the float and make 2* string
-fl = 0.5343
-str = "Hello"
-my_string = f"the variable is {fl*2} and {str*2}"
-print(my_string)
+#fl = 0.5343
+#str = "Hello"
+#my_string = f"the variable is {fl*2} and {str*2}"
+#print(my_string)
 
 
 
