@@ -145,6 +145,8 @@
 
 
 
+
+
 #7.7 - Write a Python program to display the first and last colors from the following list.
 #color_list = ["Red","Green","White" ,"Black"]
 #print("First: " + color_list[0] + " \nLast: " + color_list[-1])
@@ -154,9 +156,17 @@
 
 
 
+
+
+
+
 #7.8 - Write a Python program to display the examination schedule. (extract the date from exam_st_date).
 #exam_st_date = (11, 12, 2021)
 #print("Exam Date: %i / %i / %i"%exam_st_date ) # Again formating with the %
+
+
+
+
 
 
 
@@ -175,10 +185,12 @@
 
 
 
+
  
  #8.1 - Write a Python program to print the documents (syntax, description etc.) of Python built-in function(s).
  
 #print(abs.__doc__)
+
 
 
 
@@ -199,12 +211,17 @@
 
 
 
+
 #8.3 - Write a Python program to print the calendar of a given month and year.
 
 #print("""aaa aaa aaaaa AAAAaa aaAAAaaA "bbbbBB" ..........
 #CCCCCCCCC
 #ddddddddddd eeeeeeeeeeeee
 #gggggggggggggggggggggg""")
+
+
+
+
 
 
 
@@ -223,11 +240,20 @@
 
 
 
+
+
+
+
 ##8.5 - Write a Python program to get the the volume of a sphere with radius 6. 
 #pi = 3.14159226
 #r = float(input("Radius: "))
 #V = 4.0/3.0*pi* r**3
 #print("The Volume of the Sphere is: ",V)
+
+
+
+
+
 
 
 
@@ -249,9 +275,19 @@
 
 
 
+
+
+
+
 #9 - start, stop, step
 #for x in range(4, 12, 2):
 # print(x)
+
+
+
+
+
+
 
 
 
@@ -293,6 +329,9 @@
 
 
 
+
+
+
 # 11 - While Loop
 
 #m = 8
@@ -300,6 +339,9 @@
 #while m> 2:
 #    print(m)
 #    m=m-1
+
+
+
 
 
 
@@ -323,12 +365,19 @@
 
 
 
+
+
+
 #13 - Print From 2 to 5 index - From to 
 
 #a = "Hello World!"
 
 #print(a[2:5])
 #print(a.split(" ")) # Split and becomes array
+
+
+
+
 
 
 
@@ -357,6 +406,8 @@
 
 
 
+
+
 #15 While Loop
 
 #i = 1
@@ -368,12 +419,24 @@
 
 
 
+
+
+
+
+
+
 #15 For loop
 
 #my_string = "abcdefg"
 #for x in my_string:
 #    print(x)
     
+
+
+
+
+
+
 
 
 
@@ -394,6 +457,12 @@
 
 
 
+
+
+
+
+
+
 # 17 - Try Exept
 #try:
 #    number = int(input("Give me a number: "))
@@ -401,6 +470,8 @@
 
 #except:
 #    print("Invalid Input")
+
+
 
 
 
@@ -456,6 +527,10 @@
 
 
 
+
+
+
+
 #19 - CLASS
 
 ## From the Student FILE import the student CLASS
@@ -470,6 +545,9 @@
 
 ## Class Method Example
 #print(student1.is_over_18())
+
+
+
 
 
 
@@ -509,6 +587,8 @@
 
 
 
+
+
 ##21 - Default values
 ## Default number = 1 if nothing is given to the method
 #def method1(x=1):
@@ -522,12 +602,17 @@
 
 
 
+
+
+
 #22 - Multiply word
 # Default number = 1 if nothing is given to the method
 #def method1(word, freq = 1):
 #    print(word*freq)
 
 #method1('Gosho', 10)
+
+
 
 
 
@@ -693,6 +778,8 @@
 
 
 
+
+
 #30 - Get byte size
 #import sys
 #my_list = [0, 1, 2, "hello", True]
@@ -700,6 +787,8 @@
 
 #print(sys.getsizeof(my_list), "bytes")
 #print(sys.getsizeof(my_tuple), "bytes")
+
+
 
 
 
@@ -790,6 +879,8 @@
 
 
 
+
+
 ##32 -  Sets
 #myset = set()
 
@@ -848,6 +939,10 @@
 #diff = setB.symmetric_difference(setA)
 
 #print(diff)
+
+
+
+
 
 
 
@@ -932,11 +1027,15 @@
 
 
 
+
 #34 - Reverse String
 #my_string = "Stefan"
 ##substring = my_string[::-1]
 ##substring = my_string[1:3]
 #print(substring)
+
+
+
 
 
 
@@ -950,10 +1049,15 @@
 
 
 
+
+
+
 #36 - String starts with
 #my_string = 'Hello World'
 #print(my_string.startswith('Hello'))
 #print(my_string.endswith('Hello'))
+
+
 
 
 
@@ -966,9 +1070,15 @@
 
 
 
+
+
+
 ## 37 - Count specific char in string
 #my_string = 'Hello World'
 #print(my_string.count('o'))
+
+
+
 
 
 
@@ -984,11 +1094,20 @@
 
 
 
+
+
+
 ## 39 - String to list
 #my_string = 'Hello World'
 ##my_list = my_string.split()
 ##my_list = my_string.split(",")
 #print(my_list)
+
+
+
+
+
+
 
 
 
@@ -1007,6 +1126,12 @@
 ## From list to string
 #new_string2 = ''.join(my_list)
 #print(new_string2)
+
+
+
+
+
+
 
 
 
@@ -1046,6 +1171,12 @@
 
 
 
+
+
+
+
+
+
 #42 - String with %s = string, %d = int, %f = float, %2f = float with 2 digits after the comma - variable
 
 ## 1
@@ -1072,6 +1203,103 @@
 #my_string = f"the variable is {fl*2} and {str*2}"
 #print(my_string)
 
+
+
+
+
+
+
+
+
+# 43 - Collections
+# Add String to Dictionary with the amount of same chars insde the string
+
+#from collections import Counter
+#a = "aaaaaabbbbbbccccc"
+#my_counter = Counter(a)
+##print(my_counter)
+##print(my_counter.keys())
+##print(my_counter.values())
+##print(my_counter.most_common(2)) # 1 = most common , 2 = second most common
+##print(my_counter.most_common(1)[0][0]) # [0] = the tuple at index zero than the element [0] in the tuple
+#print(list(my_counter.elements())) # Get the elements as list 
+
+
+
+
+
+
+
+
+
+
+
+
+# 44 - namedTuple - Point
+ 
+# Easy to Create lightweight object type simillar to struct
+
+#from collections import namedtuple
+#Point = namedtuple('Point', 'x,y')
+#pt = Point(1, -4)
+#print(pt)
+
+
+
+
+
+
+
+
+
+
+#45 - Ordered Dict - Remember the order of insertion
+#from collections import OrderedDict
+#ordered_dict = OrderedDict() 
+#ordered_dict['a'] = 1
+#ordered_dict['c'] = 3
+#ordered_dict['b'] = 2
+#ordered_dict['d'] = 4
+#print(ordered_dict) 
+
+
+
+## Normal Dictionary
+#dictN = {'b':1, 'a':2, 'c':3}
+#print(dictN)
+
+
+
+## Dictionary 3
+#from collections import defaultdict
+#d = defaultdict(int) #int, float, string, list etc.
+#d ['a'] = 1
+#d ['b'] = 2
+#d ['c'] = 3
+#print(d['a'])
+
+
+
+
+
+# Dictionary DEQUE
+#from collections import deque
+#d = deque() 
+#d.append(1)
+#d.append(2)
+
+#d.appendleft(3) # Append to the left
+#print(d)
+
+##d.pop()# Pop = return and remove last element
+##d.popleft()
+##d.clear()# Remove all elements
+##d.extend([4,5,6])
+##d.extendleft([4,5,6])
+#d.rotate(1)
+##d.rotate(2) # rotate 2 places to the right
+#d.rotate(-2) # rotate 2 places to the left
+#print(d)
 
 
 
