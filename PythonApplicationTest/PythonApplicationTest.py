@@ -1303,3 +1303,126 @@
 
 
 
+
+
+
+
+
+
+#46 - Product -IterTools - Combine all numbers to list
+
+#from itertools import product
+#a = [1,2]
+#b = [3,4]
+#prod = product(a,b)
+##prod = product(a,b, repeat=2)
+#print(list(prod))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#47 - Combine all numbers in all different ways - Ex. Password bot
+
+#from itertools import permutations
+#a = [1,2,3]
+#perm = permutations(a)
+##perm = permutations(a, 2) #Only different combinations with 2
+#print(list(perm))
+
+
+
+
+
+
+
+
+
+
+
+
+
+#48 - Combinations - All possible combinations with lenght 2
+#from itertools import combinations
+##a=[1,2,3]
+##comb = combinations(a,2)
+##print(list(comb))
+
+
+
+
+# Combinations with replacement
+#from itertools import combinations, combinations_with_replacement
+#a=[1,2,3]
+#comb = combinations(a,2)
+#print(list(comb))
+#comb_wr = combinations_with_replacement(a, 2)
+#print(list(comb_wr))
+
+
+
+
+
+# 49 - Acumulate - plus the numbers from the different lists in zigzac way
+
+#from itertools import accumulate
+#a = [1, 2, 3, 4]
+#acc = accumulate(a)
+#print(a)
+#print(list(acc))
+
+
+
+
+
+
+
+#50 - Multiply the numbers from the lists
+
+#from itertools import accumulate
+#import operator
+#a = [1, 2, 3, 4]
+#acc = accumulate(a, func=operator.mul)
+ 
+#print(a)
+#print(list(acc))
+
+
+
+
+
+
+
+## Max
+#from itertools import accumulate
+#import operator
+#a = [1, 2, 5, 3, 4]
+#acc = accumulate(a, func=max)
+#print(a)
+#print(list(acc))
+
+
+
+
+
+#Groupby
+
+#from itertools import groupby
+
+## Method
+#def smaller_than_3(x):
+#    return x <3
+
+#a = [1, 2, 3, 4]
+#group_obj = groupby(a, key=smaller_than_3)
+#for key, value in group_obj:
+#    print(key, list(value))
