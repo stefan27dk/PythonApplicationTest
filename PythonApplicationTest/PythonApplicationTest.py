@@ -1432,3 +1432,693 @@
 
 
 
+#51 -  Lambda
+#add10 = lambda x: x +10
+#print(add10(5))
+
+## Func
+#def add10_func(x):
+#    return x + 10
+
+## Lambda
+#mult = lambda x,y: x*y
+#print(mult(2,7))
+
+
+
+
+# ---------------------------------
+#points2D = [(1, 2), (15, 1), (5, -1), (10, 4)]
+
+#points2D_sorted = sorted(points2D, key =lambda x: x[1]) # Sort by key
+#points2D_sorted2 = sorted(points2D, key =lambda x: x[0]) # Value // Not sure
+#points2D_sorted3 = sorted(points2D, key =lambda x: x[0] + x[1]) # Sort acording to the sum of each Like (1, 2) = 3 etc.
+#print(points2D)
+
+#print(points2D_sorted)
+#print(points2D_sorted2)
+
+
+
+## Every next number is added to 2
+#a = [1, 2, 3, 4, 5]
+#b = map(lambda x: x*2, a)
+#print(list(b)) # Convert to list
+
+
+## Better = easier
+## Same thing - # Every next number is added to 2
+#c = [x*2 for x in a]
+#print(c)
+
+
+
+
+## Same thing
+## Filter function
+#a = [1, 2, 3, 4, 5, 6]
+#b = filter(lambda x: x%2 == 0, a)
+#print(list(b))
+
+#c = [x for x in a if x%2== 0]
+#print(c)
+
+
+
+
+
+## Reduce Function
+#from functools import reduce
+#a = [1, 2, 3, 4]
+
+#product_a = reduce(lambda x,y: x*y, a) # [1, 2, 3, 4] = 1*2 = 2 * (3*4) = 24
+#print(product_a)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 52 - Process
+#from multiprocessing import Process
+#import os
+##import time # Like stopwatch - Used dor getting the time executing nothing to do with the threading
+##time.sleep(0.1)
+
+#def square_numbers():
+#    for i in range(100):
+#        i * i
+
+
+#processes = []
+#num_processes = os.cpu_count()
+
+
+## Create processes
+#for i in range(num_processes):
+#    p = Process(target=square_numbers)
+#    processes.append(p)
+
+
+##Start
+#for p in processes:
+#    p.start()
+
+
+## Join
+#for p in processes:
+#    p.join()
+
+#print('End Main')
+
+
+
+
+
+
+
+
+
+
+
+
+## Threading ------------------------------------------
+
+## 52 - Process
+#from threading import Thread
+#import os
+
+#def square_numbers():
+#    for i in range(100):
+#        i * i
+
+
+#threads = []
+#num_threads = 10
+
+
+## Create processes
+#for i in range(num_threads):
+#    t = Thread(target=square_numbers)
+#    threads.append(t)
+
+
+##Start
+#for t in threads:
+#    t.start()
+
+
+## Join
+#for t in threads:
+#    t.join()
+
+#print('End Main')
+
+
+
+
+
+
+
+
+
+
+
+## 53 - Multi Threading
+# Threads share same memmory space, whilw Processes dont - One process can contain many threads
+#Starting a process is much havier than starting a Thread - Starting a process reserves amount of memmory
+# In C# Thread pool is much better because it dont start threads but having threads that are waiting to be assigned to work
+#So thread Pool is much better than staring thread and use it
+
+#from threading import Thread
+
+#def square_numbers():
+#    for i in range(100):
+#        i*i
+
+#if __name__ == "__main__":
+#            threads = []
+#            num_threads = 10
+
+#            # Create Threads
+#            for i in range(num_threads):
+#                thread = Thread(target=square_numbers)
+#                threads.append(thread)
+          
+#            # Start Threads
+#            for thread in threads:
+#                thread.start()
+          
+#            #Join Threads: Wait for them to complete
+#            for thread in threads:
+#                thread.join()
+          
+#            print('END MAIN')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 54 -  Multi Threading - Share Data between Threads
+ 
+#from threading import Thread
+#import time
+#database_value = 0 # Simulate DB
+
+
+#def increase():
+#    global database_value
+
+#    local_copy = database_value
+
+#    # Rrocessing
+#    local_copy +=1
+#    time.sleep(0.1)
+
+
+#    database_value = local_copy 
+
+
+
+#if __name__ == "__main__":
+#    print('Start value', database_value)
+
+#    thread1 = Thread(target=increase)
+#    thread2 = Thread(target=increase)
+
+#    thread1.start()
+#    thread2.start()
+
+#    thread1.join()
+#    thread2.join()
+
+#    print('end value', database_value)
+#    print('end main')
+
+
+
+
+
+
+
+
+
+
+
+
+# 55.  Generators
+# Generators are functions that return object that can be iterated over. It generates the items of the object later only when you ask for it. 
+# Memmory efficient
+
+
+#def mygenerator():
+#    yield 1
+#    yield 2
+#    yield 3
+
+#g = mygenerator()
+
+
+#1 - Print All
+#for i in g:
+#    print(i)
+
+
+#2 - Print Next
+#value = next(g)
+#print(value)
+
+
+
+#value = next(g)
+#print(value)
+
+
+
+
+
+#3
+#print(sum(g))
+
+
+
+
+#4
+#print(sorted(g))
+
+
+
+
+
+
+
+
+
+#Generator 2 -------------------------------------------------------------------------------------
+
+
+#def countdown(num):
+#    print('Starting')
+#    while num > 0:
+#        yield num  #Stops here and waits for ex. next(cd)
+#        num -=1
+
+#cd = countdown(4)
+
+#value = next(cd)
+#print(value)
+
+
+#print(next(cd))
+
+
+
+
+
+
+
+
+
+#Generator 3 --------------------------------------------------------------------------------------
+# No Generator
+#def firstn(n):
+#    nums = []
+#    num = 0
+#    while num < n:
+#        nums.append(num)
+#        num += 1
+#    return nums
+
+#print(sum(first(10)))
+
+
+
+
+#Gen4---------------------------------------------------------
+
+#import sys
+
+## 1 No generator uses more memmory
+#def firstn(n):
+#    nums = []
+#    num = 0
+#    while num < n:
+#        nums.append(num)
+#        num += 1
+#    return nums
+
+
+
+## With Generator uses less memmory
+#def firstn_generator(n):
+#    num = 0
+#    while num < n:
+#        yield num
+#        num += 1
+
+##print(sum(firstn(10)))
+##print(sum(firstn_generator(10)))
+
+#print(sys.getsizeof(firstn(10000000)))
+#print(sys.getsizeof(firstn_generator(10000000)))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Fibonachi with yield - Generqator --------------------------------------------------------------------------------
+
+#def fibonachi(limit):
+#    #011235813...
+#    a, b = 0, 1
+#    while a < limit:
+#        yield a
+#        a, b = b, a + b
+
+#fib = fibonachi(30)
+#for i in fib:
+#    print(i)
+
+
+
+
+
+#------Generator -- memmory Comparison------------------------------------------------------------
+
+## Less Memorry
+#import sys
+#mygenerator = (i for i in range(100000) if i % 2 == 0)
+#print(sys.getsizeof(mygenerator))
+
+
+## More memmory
+#mylist = [i for i in range(100000) if i % 2 == 0]
+#print(sys.getsizeof(mylist))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 57 - Random Number
+#import numpy as np
+#np.random.seed(123)
+
+
+#print(np.random.randint(2,5))
+
+
+
+
+
+
+
+
+
+
+
+
+# 58 -- For loop ---------------------------------------------------------------
+#for x in range(0, 10):
+#    print(x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 59 - Decorators -------------------------------------------------------------
+# Decorator allows you to add more funktionality to a method without modifying it
+
+
+#@mydecorator
+#def dosomething():
+#    pass
+
+
+
+
+##1 -----------------------------------------------------
+##1 - Func 1
+#def start_end_decorator(func):
+
+#    def wrapper():
+#        print('Start')
+#        func()
+#        print('End')
+#    return wrapper
+
+
+
+##2 - Func 2
+#def print_name():
+#    print('Stefan')
+
+
+
+#print_name = start_end_decorator(print_name)
+
+#print_name()
+
+
+
+
+
+##2 -------------------------------------------------------------
+##1 - Func 1
+#def start_end_decorator(func):
+
+#    def wrapper():
+#        print('Start')
+#        func()
+#        print('End')
+#    return wrapper
+
+
+
+##2 - Func 2
+#@start_end_decorator
+#def print_name():
+#    print('Stefan')
+
+ 
+
+#print_name()
+
+
+
+
+
+
+
+
+
+
+
+#3 ------------Decrators-------------------------------------------------
+#import functools
+
+##1 - Func 1
+#def start_end_decorator(func):
+#    @functools.wraps(func)
+#    def wrapper(*args, **kwargs): # 11111111111
+#        print('Start')
+#        result = func(*args, **kwargs)
+#        print('End')
+#        return result
+#    return wrapper # 2222222222
+
+
+
+##2 - Func 2
+#@start_end_decorator
+#def add5(x):
+#    return x + 5
+
+ 
+
+#print(help(add5))
+#print(add5.__name__)
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 60 - Random numbers -----------------------------------------------------------------------
+
+import random
+
+## Float Random
+#a = random.random()
+#print(a)
+
+
+
+## Range
+#b = random.uniform(1, 10)
+#print(b)
+
+
+
+## Range Int
+#c = random.randint(1, 10)
+#c = random.randrange(1, 10) # upper bound not included not picking the 10
+#print(c)
+
+
+
+
+## Normal Variate
+#d = random.normalvariate(0, 1) 
+#print(d)
+
+
+
+
+
+# Random Pick from a List -------------------------------------------------------------
+#mylist = list("ABCDEFGH")
+#print(mylist)
+
+#a = random.choice(mylist) # Picks random element from the list
+#a = random.sample(mylist, 3) # Picks 3 unique elements No repeats of chars "Cant pick same char more than ones"
+#a = random.choices(mylist, k=3) # Can pick same char more than ones  
+#a = random.shuffle(mylist) # Mixing the elements "shuffles the element
+#print(mylist)
+
+#print(a)
+
+
+
+
+
+
+
+
+
+
+#2 Random Pick from a List -------------------------------------------------------------
+#import random
+
+#random.seed(1) # SEED
+#print(random.random())
+#print(random.randint(1, 10))
+
+
+
+#random.seed(2) # SEED
+#print(random.random())
+#print(random.randint(1, 10))
+
+
+
+#random.seed(1) # SEED
+#print(random.random())
+#print(random.randint(1, 10))
+
+
+
+
+
+#3 Random -------------------------------------------------------------------------------------
+
+#import secrets
+
+#a = secrets.randbelow(10) # int between 0 - 10
+#a = secrets.randbits(4) #Max 4 bit- 1111 = 15    #Menas that tha max number is 15 so 0 -15 
+#print(a)
+
+
+
+#2 Random - Secret--------------------------------------------------------
+
+#mylist = list("ABCDEFGH")
+#a = secrets.choice(mylist)
+#print(a)
+
+
+#3 Random - Numpy--------------------------------------------------------
+
+#import numpy as np
+
+##a = np.random.rand(3) # Float Array 3 slots
+##a = np.random.rand(3,3) # Float Array 3x3
+##a = np.random.randint(0, 10, 3) # Range = 0-10 excluding 10 # Size 3
+##a = np.random.randint(0, 10, (3,4)) # 3x4 Array
+ 
+#print(a)
+
+
+
+#4 Shuffle - Mix up the elements -------------------------------------------------------------------------
+
+#import numpy as np
+
+
+#arr = np.array([[1,2,3], [4, 5, 6], [7, 8, 9]])
+#print(arr)
+#np.random.shuffle(arr)
+#print(arr)
