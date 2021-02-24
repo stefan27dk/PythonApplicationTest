@@ -2122,3 +2122,26 @@ import random
 #print(arr)
 #np.random.shuffle(arr)
 #print(arr)
+
+
+
+
+
+# 61 PANDAS --------------------------------------------------------------
+
+import pandas as pd
+
+df = pd.read_csv('pokemon_data.csv')
+#df = pd.read_csv('pokemon_data.csv', delimiter='\t') # Seperate colums by
+#print(df) # Print All
+
+#print(df.head(3)) # Print first 3 rows
+#print(df.tail(3)) # Print the last 3 rows
+
+#print(df.columns) # The columns
+
+#print(df['Name']) # Only Name
+
+#print(df['Name'][0:5]) # First five names
+
+
